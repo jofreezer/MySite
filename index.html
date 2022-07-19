@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    
+    <title>My portfolio</title>
+</head>
+<body>
+  
+     <header class="header fixed">
+         <div class="container">
+             <div class="row justify-header align-items-c">
+                <div class="brand">
+                     <a href="index.html">Jofreezer</a>
+                </div>
+
+               <div class="nav-toggle" id="menu">
+                   <span></span>
+               </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+             </div>
+             
+         </div>
+     </header>
+
+
+     <!-- home section -->
+     
+<section class="home-section" id="home">
+   
+         <div class="container">
+             <div class="row align-dev">
+                 <div class="home-content">
+                    <h4>Hi,</h4>
+                    <h4>I am Jofreezer</h4>
+                 </div>
+             </div>
+         </div>
+</section>
+
+<!-- about section -->
+
+<section class="about" id="about">
+   
+      
+           
+        <div class="image">
+            <img src="img/about.jpg"  alt="">
+        </div>
+        <div class="content">
+            <h2 class="me">About me...</h2>
+            <p>Hi, my name is Joffrey Dusenge, I am a web developer, I spend most of my time on my laptop, learning new technologies and building websites
+                and One of my dreams is to smarter as many as possible web development technologies and cyber security, and become the best tech engineer in the world, and now I am working toward it.</p>
+               
+        </div>
+         
+               
+          
+            
+          
+      
+   
+</section>
+
+<!-- contact section-->
+
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-img">
+            <div class="img-box">
+                <div class="section-title">
+                    <h1>Contact Me</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="contact-form">
+            <form class="form" method="POST" enctype="text/plain">
+                <div class="row">
+                    <div class="left input-group">
+                        <label for="">Name</label>
+                        <input type="text" placeholder="Your Name" name="" id="" class="input-control">
+                    </div>
+                      
+                    <div class=" right input-group">                
+                        <!-- <label for="">Phone</label>
+                        <input type="tel" placeholder="Your Phone Number" name="" id="" class="input-control"> -->
+                        <label for="">Email</label>
+                        <input type="text" placeholder="your email" name="" id="" class="input-control">
+                    </div>
+            
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="">Message</label>
+                        <textarea name="" placeholder="your message" id="" cols="30" rows="10" class="input-control"></textarea>
+                     </div>
+                  
+                   
+                </div>
+                <!-- <div class="form-btn">
+                    <button type="button" class="btn btn-01">Send Message</button>
+                </div> -->
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="contact-info">
+            <div class="row">
+                <div class="info-item">
+                    <h5>My Mobile Number</h5>
+                    <p>(+257) 71190595 / (+254) 742479579</p>
+                </div>
+                <div class="info-item">
+                    <h5>My Email</h5>
+                    <p>dusejoffrey@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- copyright -->
+<p class="copyright">&copy; 2021 | Developed By:Jofreezer</p>
+     <!-- <div class="row">
+                <div class="social-links">
+                    <a href="" title="facebook"><img src="img/joffrey.JPG" alt="facebook"></a>
+                    <a href="" title="Instagram"><img src="img/joffrey.JPG" alt="Instagram"></a>
+                    <a href="" title="LinkIn"><img src="img/joffrey.JPG" alt="LinkIn"></a>
+                    <a href="" title="Twitter"><img src="img/joffrey.JPG" alt="Twitter"></a>
+                    <a href="" title="GitHub"><img src="img/joffrey.JPG" alt="GitHub"></a>
+                </div>
+            </div> -->
+
+
+
+<!-- jquery script -->
+
+<script>
+    $(document).ready(function(){
+
+
+        $(document).ready(function(){
+           $('#menu').click(function(){
+            $('.brand').fadeIn();
+            //   $(this).toggleClass('fa-times');
+              $('.nav').toggleClass('nav-toggle');
+           });
+           $(window).on('scroll',function(){
+            // $(this).removeClass('fa-times');
+            $('.brand').fadeOut();
+              $('.nav').removeClass('nav-toggle');
+           });
+        });
+       
+ //nav toggle
+//  $(".nav-toggle").click(function(){
+//      $(".header .nav").slideToggle();
+//  })
+//  $(".header .nav a").click(function(){
+//      if($(window).width() < 768){
+//         $(".header .nav").slideToggle();
+//      }
+//  })
+
+
+
+
+
+   //fixed header
+//    $(window).scroll(function(){
+//         if($(this).scrollTop()>100){
+//             $(".header").addClass("fixed");
+//         }
+//         else{
+//             $(".header").removeClass("fixed");
+//         }
+//    })
+
+
+
+
+
+        // Add smooth scrolling to all links
+$("a").on('click', function(event) {
+
+// Make sure this.hash has a value before overriding default behavior
+if (this.hash !== "") {
+// Prevent default anchor click behavior
+event.preventDefault();
+
+// Store hash
+var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+$('html, body').animate({
+scrollTop: $(hash).offset().top
+}, 800, function(){
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+window.location.hash = hash;
+});
+} // End if
+});
+
+    });
+</script>
+
+
+</body>
+</html>

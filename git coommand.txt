@@ -1,0 +1,16 @@
+git init 
+git status
+git config --global user.email " "
+git config --global user.name " "
+git add . or -A
+git commit -m ""
+git log
+git checkout (to revert back or rollback)
+    git diff name or git show
+    git checkout name
+git branch -M 'main'
+git remote add origin https...
+git push -u origin main
+git remote add :: 
+git push -u :: main/master
+git checkout master
